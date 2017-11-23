@@ -17,3 +17,20 @@ const bonus = driverData.bonus;
 let canRentACar;
 
 // Your code here:
+const conductorA = {
+  name: 'Chloe',
+  license: driverLicense,
+  licenseYear: licenceIssued,
+  accidentsCount: numberOfAccident,
+  bonus: bonus
+};
+
+if (
+  (conductorA.license ==='B'||conductorA.license==='B1')
+  && conductorA.licenseYear <= 2015
+  && (conductorA.accidentsCount=== 0||conductorA.bonus> 0.7)
+) {
+  canRentACar = true;
+}else {
+  canRentACar = false;
+}
