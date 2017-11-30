@@ -1,8 +1,24 @@
 // filter takes an array of integer and a function of filtering
 // such as filter([1, 2, 3, 4, 5], pickEvenNumbers) returns [2, 4]
+
+function pickEvenNumbers (number) {
+  return (number % 2 === 0);
+}
+
+
 function filter(array, fn) {
-  // Your code here
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    if (fn(array[i])) {
+      newArray.push(array[i]);
+    }
+  }
+  return newArray;
+  //return fn(array);
 }
 
 // do not remove this line, it is for tests
+
+const test = filter([1, 2, 3, 4, 5], pickEvenNumbers);
+
 module.exports = filter;
