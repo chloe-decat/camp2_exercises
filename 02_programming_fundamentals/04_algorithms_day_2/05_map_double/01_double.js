@@ -2,6 +2,17 @@
 // WARNING: You're not allowed to use `Array.map`!
 
 // Your code here...
+function double(list){
+  let newArray = [];
+  for (let i = 0; i < list.length; i++) {
+    newArray.push(list[i]*2);
+  }
+  return newArray;
+}
+
+
+
+
 
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
