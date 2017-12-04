@@ -15,25 +15,18 @@
 // Do not remove last lines, it is for tests
 // eslint-disable-next-line
 
-function double (number) {
+function double(number) {
   return (number * 2);
 }
 
+function map(list, double) {
+  const newArray = [];
 
-function map(array, fn) {
-  let newArray = [];
-  for (let i = 0; i < array.length; i++) {
-    if (fn(array[i])) {
-      newArray.push(array[i]);
-    }
+  for (let i = 0; i < list.length; i++) {
+    newArray.push(double(list[i]));
   }
+
   return newArray;
-  //return fn(array);
 }
-
-// do not remove this line, it is for tests
-
-const test = double([1, 2, 3, 4, 5], map);
-
 
 module.exports = { double: double, map: map };

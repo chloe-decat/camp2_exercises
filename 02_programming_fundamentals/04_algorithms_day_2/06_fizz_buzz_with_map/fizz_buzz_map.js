@@ -8,10 +8,18 @@
 
    YOU MUST USE array.map
 */
-
 function fizzBuzz(list) {
 
-}
-
+  return list.map((element) => {
+    if (element%3===0&&element%5===0) {
+      return "FizzBuzz";
+    } else if (element%5===0) {
+      return "Buzz";
+    } else if (element%3===0) {
+      return "Fizz";
+    } else {
+      return element;
+    }
+  });
 
 module.exports = fizzBuzz;
