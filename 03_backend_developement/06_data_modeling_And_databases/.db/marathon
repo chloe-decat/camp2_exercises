@@ -1,0 +1,13 @@
+CREATE TABLE races (
+id integer CONSTRAINT identifier_constraint PRIMARY KEY,
+race_name varchar(255) NOT NULL,
+date timestamp,
+runner_name varchar(255) NOT NULL,
+bib integer NOT NULL,
+rank varchar(255) NOT NULL,
+race_time time
+);
+
+
+INSERT INTO races (race_name)
+VALUES ('New York City Marathon - Women''New York City Marathon - Men');
