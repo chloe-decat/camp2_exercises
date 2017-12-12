@@ -1,3 +1,11 @@
 node_modules
 /*.result
 /*.weather
+03_backend_developement/01_HTTP/02_curl_get/01_postman_api_call.result
+03_backend_developement/01_HTTP/02_curl_get/02_postman_api_call.result
+03_backend_developement/01_HTTP/02_curl_get/03_postman_api_call.result
+03_backend_developement/01_HTTP/02_curl_get/04_postman_api_call.result
+03_backend_developement/01_HTTP/02_curl_get/05_postman_api_call.result
+03_backend_developement/01_HTTP/03_curl_post/01_postman_api_post.result
+03_backend_developement/01_HTTP/03_curl_post/02_postman_api_post.result
+03_backend_developement/01_HTTP/03_curl_post/03_postman_api_post.result
