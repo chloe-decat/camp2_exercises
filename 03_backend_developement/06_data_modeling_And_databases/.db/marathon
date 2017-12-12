@@ -9,5 +9,97 @@ race_time time
 );
 
 
-INSERT INTO races (race_name)
-VALUES ('New York City Marathon - Women''New York City Marathon - Men');
+INSERT INTO races (id, race_name, date, runner_name, bib, rank, race_time)
+VALUES
+(1,'New York City Marathon - Women','2017-11-05 08:30:00.00', 'speedette gonzales',89,2500,'02:29:06.789'),
+(2,'New York City Marathon - Men','2017-11-05 08:30:00.00', 'Francois Ducatillon',179,1500,'02:14:06.789'),
+(3,'New York City Marathon - Men','2017-11-05 08:30:00.00', 'Koen Naert',005,15,'01:50:06.789');
+
+
+SELECT *
+FROM races
+WHERE race_name = 'New York City Marathon - Women';
+
+
+INSERT INTO races (id, race_name, date, runner_name, bib, rank, race_time)
+VALUES
+(4,'New York City Marathon - Women','2017-11-05 08:30:00.00', 'Zezete Courtsupervite',89,3500,'03:29:06.789'),
+(5,'New York City Marathon - Men','2017-11-05 08:30:00.00', 'Jean Bamoncou',269,1900,'02:24:06.789'),
+(6,'New York City Marathon - Men','2017-11-05 08:30:00.00', 'Buzz Leclair',270,3900,'03:44:06.789');
+
+SELECT *
+FROM races
+WHERE race_name = 'New York City Marathon - Men'
+ORDER BY race_time asc
+LIMIT 3;
+
+SELECT *
+FROM races
+WHERE race_name = 'New York City Marathon - Men'
+AND race_time < '02:30:00.000'
+AND bib < 100;
+
+SELECT *
+FROM races
+WHERE id IN (
+SELECT id
+FROM races
+WHERE bib > 100 AND race_time < '02:15:00.000'
+) OR
+id IN (
+SELECT id
+FROM races
+WHERE bib > 100 AND race_time < '02:30:00.000'
+)
+ORDER BY race_time asc;
+
+SELECT bib, runner_name, rank
+FROM races
+WHERE race_time < (
+SELECT race_time
+FROM races
+where runner_name = 'Koen Naert'
+);
+
+CREATE TABLE purchases (
+purchases_id uuid DEFAULT uuid_generate_v4 () CONSTRAINT identifier_constraint PRIMARY KEY,
+client_name varchar(255) NOT NULL,
+euros_spent integer NOT NULL,
+fidelity_points_earned integer NOT NULL,
+purchase_date timestamp,
+number_of_items integer NOT NULL
+);
+
+SELECT *
+FROM purchases
+ORDER BY purchase_date asc
+LIMIT 3;
+
+SELECT client_name
+FROM purchases
+WHERE client_name
+NOT IN (
+SELECT client_name
+FROM purchases
+WHERE purchase_date < CURRENT_DATE -60
+);
+
+
+SELECT DISTINCT client_name
+FROM purchases
+WHERE client_name
+not IN (
+SELECT client_name
+FROM purchases
+WHERE purchase_date > CURRENT_DATE -30
+)
+AND client_name IN (
+SELECT client_name
+FROM purchases
+WHERE number_of_items >3
+);
+
+SELECT client_name, euros_spent
+FROM purchases
+ORDER BY euros_spent desc
+LIMIT 2;
