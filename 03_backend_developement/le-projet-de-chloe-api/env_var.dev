@@ -1,0 +1,5 @@
+export PGUSER="Chloe"
+export PGHOST="localhost"
+export PGDATABASE="commerce_api"
+export PGPASSWORD=""
+export PGPORT="5432"
