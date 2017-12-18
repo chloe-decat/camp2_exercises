@@ -1,0 +1,15 @@
+tr:nth-child(2n+0) {background: #CCC}
+tr:nth-child(2n+1) {background: #FFF}
+
+.important
+{
+  font-weight: bold;
+}
+.emphasis
+{
+  font-style: italic;
+}
+.important.emphasis 
+{
+  color: red;
+}
