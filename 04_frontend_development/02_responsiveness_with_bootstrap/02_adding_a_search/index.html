@@ -34,7 +34,25 @@
     </div>
     <script src="./departments.js"></script>
     <script>
-      // Your code here
+    const myInput = document.getElementById("search-department");
+    const myresponse = document.getElementById("department-list")
+    // each time something is typed into the input
+    // it will call this function and display the value you typed
+    myInput.addEventListener("input", function() {
+      console.log(this.value);
+      const myString = DEPARTMENTS.join(",");
+      if (myString.includes(`${this.value}`)) {
+        console.log(this.value)
+        myresponse.innerHTML = `<li>${this.value}</li>`;
+      }// true
+      else {
+      console.log("KO")
+    };
+    });
+
+
+
+// Your code here
     </script>
   </body>
 </html>

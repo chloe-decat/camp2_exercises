@@ -17,9 +17,8 @@
         <div class="col col-sm-3"></div>
         <div class="col col-sm-9">
           <h1>List of french departments</h1>
-
           <ul id="department-list" class="list-group">
-            <!-- Your list will end up here -->
+          <!-- Your list will end up here -->
           </ul>
 
         </div>
@@ -27,7 +26,10 @@
     </div>
     <script src="./departments.js"></script>
     <script>
-      // Your code here
+      const contentdepart = document.getElementById("department-list")
+      for(let i=0; i<=DEPARTMENTS.length;i++) {
+        contentdepart.innerHTML+=`<li>${DEPARTMENTS[i]}</li>`
+      }// Your code here
       // the departments are accessible in a global variable named DEPARTMENTS
     </script>
   </body>
