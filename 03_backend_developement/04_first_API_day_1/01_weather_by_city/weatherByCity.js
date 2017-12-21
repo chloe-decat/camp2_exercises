@@ -12,11 +12,12 @@ function weatherByCity(city){
     },
     function(error, response, result) {
       const weatherObject = JSON.parse(result);
+      console.log(weatherObject.main.temp + " °C");
       return weatherObject.main.temp + " °C";
     }
   );
 }
 
-console.log(weatherByCity("london"));
+weatherByCity("london");
 
 module.exports = weatherByCity;
