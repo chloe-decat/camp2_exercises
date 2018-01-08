@@ -1,0 +1,9 @@
+{% extends "navbar.njk"%}
+{% extends "layout.njk" %}
+
+{% block main %}
+
+<p>Bonjour {{user.name}}</p>
+<a href="/logout"><button>Déconnecter</button></a>
+
+{% endblock %}

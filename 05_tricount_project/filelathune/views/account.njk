@@ -1,0 +1,58 @@
+{% extends "layout.njk"%}
+
+{% block main %}
+<style>
+  input {
+    margin:10px;
+    width: 300px;
+  }
+  .btn{
+    margin:10px;
+  }
+  .row{
+    margin:50px;
+  }
+</style>
+<font color="white">
+  <h1 class="text-center">Bienvenue sur FileLaThune</h1>
+  <p class="text-center">Les bons comptes font les bons amis</p>
+</font>
+<div class="container-fluid">
+  <div class="row card-deck col-xs-12 col-sm-6 col-md-4 card bg-light mb-3 justify-content-md-center mx-auto">
+    <h2 class="display-5">Créer un compte</h2>
+    <form action="/account" method="POST">
+      <table>
+        <tr>
+          <td>
+            <label>Nom</label>
+          </td>
+          <td>
+            <input type="text" name="name"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>E-mail</label>
+          </td>
+          <td>
+            <input type="text" name="username"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Mot de passe</label>
+          </td>
+          <td>
+            <input type="password" name="password"/>
+          </td>
+        </tr>
+      </table>
+      <div>
+        <button type="submit" class="btn btn-success btn-lg">
+          Créer mon compte
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{
+  "name": "filelathune",
+  "version": "0.0.1",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chloe-decat/filelathune.git"
+  },
+  "author": "CAFM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chloe-decat/filelathune/issues"
+  },
+  "homepage": "https://github.com/chloe-decat/filelathune#readme",
+  "dependencies": {
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "facebook-sdk": "^0.3.2",
+    "fb": "^2.0.0",
+    "forever": "^0.15.3",
+    "jest": "^22.0.4",
+    "nunjucks": "^3.0.1",
+    "oauth": "^0.9.15",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "pg": "^7.4.0",
+    "sha256": "^0.2.0",
+    "uuid": "^3.1.0"
+  }
+}
