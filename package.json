@@ -24,7 +24,8 @@
     "phoenix-channels": "^1.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "request": "^2.83.0"
+    "request": "^2.83.0",
+    "ws": "^4.0.0"
   },
   "devDependencies": {
     "jest": "^21.2.1"
